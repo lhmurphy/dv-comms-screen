@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+</head>
+
+<body>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<!-- NEED A AUTO HIDNG NAV BAR TO TOGGLE BETWEEN 4 SETTINGS -->
+<header>
+  <ul class ="nav">
+    <li>LEVEL 1</li>
+    <li>LEVEL 2</li>
+    <li>LEVEL 3</li>
+    <li>LEVEL 4</li>
+</header>
+<script>
+
+const BRICK_W = 500;
+const BRICK_H = 50;
+
+var canvas, canvasContext;
+
+window.onload = function() {
+  canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+
+  canvasContext.fillStyle = 'black';
+  canvasContext.fillRect(0,0, canvas.width, canvas.height);
+
+  canvasContext.fillStyle = 'white';
+  canvasContext.beginPath();
+  canvasContext.fillRect(BRICK_H,BRICK_W, 80, 20);
+  canvasContext.fill();
+}
+
+</script>
+
+</body>
+</html>
